@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        h1, h2, h3, p, ul {
+            padding: 1em;
+        }
+
+        h1 {
+            background-color: #212529;
+            width: 95.8vw;
+            color: white;
+            text-align: center;
+            margin: 0;
+            box-shadow: 0 8px 6px -6px #999;
+        }
+
+        h2 {
+            color: #17a2b8;
+            margin-top: 1em;
+        }
+
+        h3 {
+            color: #6c757d;
+        }
+
+        img {
+            width: 100px;
+            transition: transform .2s; /* Animation */
+            margin-right: 1em;
+        }
+
+        img:hover {
+            transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
+        a {
+            color: black;
+        }
+
+        .center-div {
+            display: flex;
+            width: 40vw;
+            flex-direction: row;
+            align-items: center;
+            padding: 1em;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            margin: 1em;
+            border-radius: 15px;
+            justify-content: space-around;
+        }
+
+        .center-div p {
+            text-align: left;
+            font-size: 20px;
+            margin-top: 1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: '➡ ';
+            color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Developer Course</h1>
+
+    <h2>Backend Configurations</h2>
+    <div class="center-div">
+        <img src="https://resources.jetbrains.com/storage/products/toolbox/img/meta/toolbox_logo_300x300.png" alt="IDEA ToolBox">
+        <p>The JetBrains Toolbox is a useful platform that allows you to download and manage JetBrains IDEs more efficiently, and provides a comprehensive way to organize your projects and various tools.</p>
+        <a href="https://www.jetbrains.com/toolbox-app/"><strong>ToolBox JetBrains</strong></a>
+    </div>
+
+    <div class="center-div">
+        <img src="https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png" alt="Intellij">
+        <p>IntelliJ IDEA is a leading Java IDE. You will use it to write your Java programs. The link takes you to its official website. However, for an integrated experience, I recommend downloading it via the JetBrains Toolbox.</p>
+        <a href="https://www.jetbrains.com/idea//"><strong>Intellij</strong></a>
+    </div>
+
+    <h3>Additional resources to download:</h3>
+    <ul>
+        <li><a href="https://sdkman.io/install"><strong>SDKMAN</strong></a> - A software development kit manager that simplifies the process of downloading and managing Java versions.</li>
+        <li>IntelliJ IDE comes with various plugins. Choose a theme that suits your aesthetic preference.</li>
+    </ul>
+
+    <h2>Frontend Configurations</h2>
+    <div class="center-div">
+        <img src="https://code.visualstudio.com/assets/apple-touch-icon.png" alt="VSCode">
+        <p>Visual Studio Code (VSCode) is a versatile code editor used for many programming languages, most commonly with JavaScript and its variants.</p>
+        <a href="https://code.visualstudio.com/download"><strong>VSCode</strong></a>
+    </div>
+
+    <div class="center-div">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png" alt="NodeJS">
+        <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. While it might not be utilized immediately in early classes, it's crucial for more advanced coding and becomes increasingly important as the course progresses.</p>
+        <a href="https://nodejs.org/en/download"><strong>NodeJS</strong></a>
+    </div>
+
+    <h3>Additional plugins to install for VSCode:</h3>
+    <ul>
+        <li>GitLens (Required at Start)</li>
+        <li>ESLint (Required at Start)</li>
+        <li>Explorer Exclude (Required at Start)</li>
+        <li>JavaScript (ES6) code snippets (Required at Start)</li>
+        <li>Polyglot Notebooks (Required at Start)</li>
+        <li>Live Server (Install when instructed)</li>
+        <li>Prettier (Install when instructed)</li>
+        <li>vscode-styled-components (Install when instructed)</li>
+        <li>Choose a theme that you like (Example: Doki Theme)</li>
+    </ul>
+
+    <h1>Necessary</h1>
+    <h2>Git</h2>
+    <p>Git is a distributed version control system that facilitates software project management. GitHub, a web-based hosting platform, leverages Git to offer additional features such as collaboration, sharing, and access control to code repositories.</p>
+
+    <h3>Create a GitHub account</h3>
+    <div class="center-div">
+        <img src="https://images.crunchbase.com/c_lpad,f_auto,q_auto:eco,dpr_1/v1426048404/y4lxnqcngh5dvoaz06as.png" alt="GitHub">
+        <p>Create a professional GitHub account using your professional email and real name. This is a significant step as this account will be your professional identity and will stay with you throughout your career.</p>
+        <a href="https://github.com/"><strong>GitHub</strong></a>
+    </div>
+
+    <h3>Install Git on your machine</h3>
+    <div class="center-div">
+        <img src="https://git-scm.com/images/logo@2x.png" alt="Git">
+        <p>It is advisable to perform this step under the guidance of the instructor for a smooth and correct installation.</p>
+        <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"><strong>Git</strong></a>
+    </div>
+</body>
+</html>
