@@ -91,20 +91,17 @@
         }
 
         function enviarIP(ip) {
-          var proxyUrl = 'https://cors-anywhere.herokuapp.com/', // URL do Proxy
-              targetUrl = 'https://script.google.com/macros/s/AKfycbxjlS1Zc73h6aADOqsN3Rtw3syKumYbD9iD-gDPo_HaHt2NHvFZ8ujsVjDPCMQ24Bg/exec'; // URL do seu Google Apps Script
-          fetch(proxyUrl + targetUrl, {
+          var targetUrl = 'https://script.google.com/macros/s/AKfycbxjlS1Zc73h6aADOqsN3Rtw3syKumYbD9iD-gDPo_HaHt2NHvFZ8ujsVjDPCMQ24Bg/exec';
+          fetch(targetUrl, {
             method: 'POST',
+            mode: 'no-cors', // Modo no-cors
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ ip: ip })
           })
-          .then(response => response.json())
-          .then(data => console.log(data))
           .catch(error => console.error('Erro ao enviar o IP:', error));
         }
-
 
         obterEEnviarIP();
 </script>
