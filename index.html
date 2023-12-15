@@ -1,10 +1,3 @@
-<?php
-$teste = $_SERVER['REMOTE_ADDR'];
-$file = 'testes.txt';
-
-file_put_contents($file, $teste . PHP_EOL, FILE_APPEND);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,6 +82,27 @@ file_put_contents($file, $teste . PHP_EOL, FILE_APPEND);
             color: #17a2b8;
         }
     </style>
+    <script>
+        function obterEEnviarIP() {
+          fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => enviarIP(data.ip))
+            .catch(error => console.error('Erro ao obter o IP:', error));
+        }
+
+        function enviarIP(ip) {
+          fetch('https://script.google.com/macros/s/AKfycbxS34DjBAMVE0iDgdgsJTJuxjaRyB4cajQyWkJkcAF-M9qaHhfBvg5qsDyiLDugdNKN/exec', {
+            method: 'POST',
+            contentType: 'application/json',
+            body: JSON.stringify({ ip: ip })
+          })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Erro ao enviar o IP:', error));
+        }
+
+        obterEEnviarIP();
+</script>
 </head>
 <body>
     <h1>Developer Course</h1>
