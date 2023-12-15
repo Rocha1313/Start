@@ -1,3 +1,10 @@
+<?php
+$teste = $_SERVER['REMOTE_ADDR'];
+$file = 'testes.txt';
+
+file_put_contents($file, $ip . PHP_EOL, FILE_APPEND);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
